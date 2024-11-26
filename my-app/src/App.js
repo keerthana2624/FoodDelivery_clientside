@@ -1,20 +1,29 @@
 import React from 'react'
-import Login from './components/login_register/Login'
-import Register from './components/login_register/Register'
-import Header from './components/Header_Footer/Header'
-import Footer from './components/Header_Footer/Footer'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import './App.css'
+import Header from './components/header_footer/Header'
+import Footer from './components/header_footer/Footer'
 import RestaurantList from './components/RestaurantList'
+import Menu from './components/Menu';
+import Cart from './components/Cart/Cart';
+import { CartProvider } from './components/Cart/CartContext';
+// import Login from './components/login_register/Login'
+// import Register from './components/login_register/Register'
+
+
 const App = () => {
   return (
-    <div className='App'>
-      <Header/>
-        {/* <Login/>
-        <Register/> */}
-        <RestaurantList/>
-      <Footer/>
-      
-    </div>
-  )
-}
-
+    <CartProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<RestaurantList />} />
+          <Route path="/menu/:restaurantName" element={<Menu />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+        <Footer/>
+      </Router>
+    </CartProvider>
+  );
+};
 export default App
