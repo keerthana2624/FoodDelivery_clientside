@@ -7,9 +7,13 @@ import RestaurantList from './components/RestaurantList'
 import Menu from './components/Menu';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './components/Cart/CartContext';
-// import Login from './components/login_register/Login'
-// import Register from './components/login_register/Register'
+import Login from './components/login_register/Login';
+import Register from './components/login_register/Register';
 import Checkout from './components/Checkout/Checkout';
+import About from './components/header_Footer_Components/About';
+import ContactUs from './components/header_Footer_Components/ContactUs';
+import PrivacyPolicy from './components/header_Footer_Components/PrivacyPolicy';
+import TermsOfService from './components/header_Footer_Components/TermsOfService';
 
 
 const App = () => {
@@ -20,8 +24,14 @@ const App = () => {
         <Routes>
           <Route path="/" element={<RestaurantList />} />
           <Route path="/menu/:restaurantName" element={<Menu />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />}/>
+          <Route path="/contact-us" element={<ContactUs />}/>
+          <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+          <Route path="/terms-of-service" element={<TermsOfService />}/>
         </Routes>
         <Footer/>
       </Router>
