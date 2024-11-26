@@ -1,0 +1,38 @@
+.header{
+    background-color: #ee420d;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e1732f;
+    height: auto;
+}
+
+.title{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-bar{
+    /* display: flex; */
+    margin-left: auto;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-right: 40px;
+}
+
+.nav-item{
+    margin-right: 70px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .nav-item a:hover {
+    color: #d4bc71;
+  }
