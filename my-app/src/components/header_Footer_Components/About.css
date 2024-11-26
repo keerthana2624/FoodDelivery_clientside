@@ -1,0 +1,23 @@
+.about {
+    background-color: #f1f1f1; /* Light grey background */
+    padding: 40px; /* Space around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Center horizontally and space from other elements */
+  }
+  
+  .about-title {
+    font-size: 28px; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #333; /* Darker color for better contrast */
+    text-align: center; /* Center title text */
+  }
+  
+  .about-description {
+    font-size: 16px; /* Standard font size for the text */
+    color: #555; /* Slightly lighter color for the text */
+    line-height: 1.6; /* Improved line height for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+  }
+  
