@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Menu.css';
 const Menu = ({ menuData }) => {
   return (
     <div className="menu-list">
