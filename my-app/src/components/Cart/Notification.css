@@ -1,0 +1,18 @@
+.notification {
+    position: fixed;
+    bottom: 20px; /* Position the notification towards the bottom */
+    right: 20px; /* Position it to the right */
+    background-color: #f8f9fa; /* Same background color as menu items */
+    border: 1px solid #28a745; /* Green border to match add-to-cart button */
+    border-radius: 8px;
+    padding: 10px 15px; /* Add some padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+    transition: opacity 0.5s ease-in-out; /* Fade effect */
+    opacity: 0; /* Initially hidden */
+  }
+  
+  .notification.show {
+    opacity: 1; /* Fully visible when the 'show' class is added */
+  }
+  
