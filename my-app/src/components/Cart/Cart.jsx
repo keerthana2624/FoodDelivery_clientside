@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from './CartContext'; // Import useCart hook
-// import './Cart.css'
+import './Cart.css'
 
 
 const Cart = () => {
