@@ -1,0 +1,124 @@
+/* Main container for the restaurant list */
+.restaurant-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual restaurant card styling */
+  .restaurant-card {
+    background-color: #f8f9fa; /* Light background for cards */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    width: 250px; /* Fixed width for cards */
+    padding: 20px; /* Inner padding */
+    margin: 20px; /* Margin between cards */
+    text-align: center; /* Centered text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  }
+  
+  /* Restaurant image styling */
+  .restaurant-image {
+    width: 150px; /* Fixed width for images */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below images */
+    border-radius: 8px; /* Rounded corners for images */
+  }
+  
+  /* Restaurant name styling */
+  .restaurant-name {
+    font-size: 20px; /* Font size for restaurant names */
+    margin: 10px 0; /* Margin around names */
+  }
+  
+  /* Restaurant description styling */
+  .restaurant-description {
+    font-size: 14px; /* Smaller font for descriptions */
+    color: #777; /* Gray color for text */
+    margin-bottom: 15px; /* Space below descriptions */
+  }
+  
+  /* View menu button styling */
+  .view-menu-button {
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Inner padding */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Hover effect for view menu button */
+  .view-menu-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Styling for the 'Add Restaurant' button */
+  button.add-restaurant-button {
+    margin-top: 20px; /* Margin above button */
+    background-color: #2196F3; /* Primary blue background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Inner padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  /* Hover effect for 'Add Restaurant' button */
+  button.add-restaurant-button:hover {
+    background-color: #0b7dda; /* Darker blue on hover */
+  }
+  
+  /* Styling for the 'Save' button */
+  button.save-button {
+    background-color: #FFA500; /* Orange background for save button */
+  }
+  
+  /* Hover effect for 'Save' button */
+  button.save-button:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
+  }
+  
+  /* Styling for Add New Restaurant form */
+  .add-restaurant-form {
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    margin: 20px auto; /* Centers the form horizontally */
+    max-width: 400px; /* Max width for the form */
+    width: 100%; /* Full width on smaller screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Column layout for inputs */
+    align-items: center; /* Center form content */
+  }
+  
+  /* Input fields inside the form */
+  .add-restaurant-form input {
+    width: 90%; /* Slightly narrower input fields */
+    padding: 8px; /* Inner padding */
+    margin-bottom: 10px; /* Space below input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Submit button for Add Restaurant form */
+  .add-restaurant-form button {
+    background-color: #2196F3; /* Blue background for submit button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px; /* Inner padding */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect */
+    width: 90%; /* Matches input fields */
+    margin-top: 10px; /* Space above button */
+  }
+  
+  /* Submit button hover effect */
+  .add-restaurant-form button:hover {
+    background-color: #0b7dda; /* Darker blue on hover */
+  }
+  
