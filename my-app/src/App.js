@@ -5,6 +5,7 @@ import Header from './components/Header_Footer/Header'
 import Footer from './components/Header_Footer/Footer'
 import RestaurantList from './components/RestaurantList'
 import Cart from './components/Cart/Cart';
+import { CartProvider } from './components/Cart/CartContext';
 const App = () => {
   return (
     <div className='App'>
