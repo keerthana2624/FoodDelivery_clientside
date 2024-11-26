@@ -1,0 +1,109 @@
+/* menu.css */
+
+/* Styling for the menu list */
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping of menu items */
+  }
+  
+  /* Styling for each menu item card */
+  .menu-item {
+    background-color: #f8f9fa; /* Same background color as restaurant card */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 200px; /* Adjust width as necessary */
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Menu item image styling */
+  .menu-image {
+    width: 100%; /* Makes image responsive */
+    height: 100px; /* Set a fixed height */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Menu item name styling */
+  .menu-name {
+    font-size: 18px; /* Slightly smaller than restaurant name */
+    margin: 10px 0;
+  }
+  
+  /* Menu item price styling */
+  .menu-price {
+    font-size: 16px;
+    color: #007bff; /* Price color to highlight */
+    margin-bottom: 10px;
+  }
+  
+  /* Add to Cart button styling */
+  .add-to-cart-button {
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Add to Cart button hover effect */
+  .add-to-cart-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  /* Optional: Add some responsiveness */
+  @media (max-width: 400px) {
+    .menu-list {
+      justify-content: center; /* Center menu items on smaller screens */
+    }
+    .menu-item {
+      width: 90%; /* Make items take up most of the screen */
+    }
+  }
+  
+  /* Styling for Add New Menu Item form */
+.add-menu-item-form {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto; /* Centers the form horizontally */
+  max-width: 400px; /* Restricts the form width */
+  width: 100%; /* Ensures form adapts to smaller screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center form content */
+}
+
+/* Input fields inside the form */
+.add-menu-item-form input {
+  width: 90%; /* Slightly narrower input fields */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit button for Add New Menu Item form */
+.add-menu-item-form button {
+  background-color: #28a745; /* Green background */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 90%; /* Matches the input fields */
+}
+
+/* Submit button hover effect */
+.add-menu-item-form button:hover {
+  background-color: #218838; /* Darker green on hover */
+}

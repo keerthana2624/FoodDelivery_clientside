@@ -3,13 +3,14 @@ import Login from './components/login_register/Login'
 import Register from './components/login_register/Register'
 import Header from './components/Header_Footer/Header'
 import Footer from './components/Header_Footer/Footer'
-
+import RestaurantList from './components/RestaurantList'
 const App = () => {
   return (
     <div className='App'>
       <Header/>
-        <Login/>
-        <Register/>
+        {/* <Login/>
+        <Register/> */}
+        <RestaurantList/>
       <Footer/>
       
     </div>
