@@ -1,92 +1,81 @@
-import React,{useState} from 'react';
-import './Menu.css'
-// import { useLocation } from 'react-router-dom';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useCart } from './Cart/CartContext'; // Import useCart hook
-import Notification from './Cart/Notification';
 
+import React, { useState, useEffect } from 'react';
+import './Menu.css';
+import { useLocation } from 'react-router-dom';
+import Notification from './Cart/Notification';
 
 const Menu = () => {
   const location = useLocation();
-  const { menuData } = location.state; // Get menuData from location's state
-  const { addToCart } = useCart(); // Use the addToCart function from context
+  const { menuData = [] } = location.state || {};  // Ensure menuData is passed correctly
   const [notification, setNotification] = useState('');
-  const [menu, setMenu] = useState(menuData); // State to manage menu data
-  const [isEditing, setIsEditing] = useState(null); // Track which menu item is being edited
-  const [newItem, setNewItem] = useState({ name: '', imageUrl: '', price: '' });
+  const [menu, setMenu] = useState(menuData);
+  const [isEditing, setIsEditing] = useState(null);
+  const [newItem, setNewItem] = useState({ name: '', imageUrl: '', price: '', id: '' });
   const [showAddMenuItemForm, setShowAddMenuItemForm] = useState(false);
 
-  const handleEdit = (index) => {
-    setIsEditing(index);
-  };
+  // Debugging to check if menuData is passed correctly
+  useEffect(() => {
+    console.log('menuData:', menuData);  // This should log the menu data coming from location.state
+    if (menuData && menuData.length > 0) {
+      setMenu(menuData);
+    }
+  }, [menuData]);
 
-  const handleSave = (index) => {
-    setIsEditing(null);
-  };
+  const addToCart = (item) => {
+    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+    console.log('Current Cart:', existingCart);  // Debugging cart before update
 
-  const handleInputChange = (index, field, value) => {
-    const updatedMenu = [...menu];
-    updatedMenu[index][field] = value;
-    setMenu(updatedMenu);
-  };
+    const itemIndex = existingCart.findIndex((cartItem) => cartItem.id === item.id);
 
-  const handleAddToCart = (item) => {
-    addToCart(item);
+    if (itemIndex >= 0) {
+      existingCart[itemIndex].quantity += 1;
+    } else {
+      existingCart.push({ ...item, quantity: 1 });
+    }
+
+    // Update localStorage
+    localStorage.setItem('cart', JSON.stringify(existingCart));
+    console.log('Updated Cart:', existingCart);  // Debugging cart after update
+
     setNotification(`Added ${item.name} to cart!`);
+    setTimeout(() => setNotification(''), 3000);
   };
 
-  // Handle adding a new menu item
   const handleAddMenuItem = () => {
+    if (!newItem.name || !newItem.imageUrl || !newItem.price || !newItem.id) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+
     setMenu([...menu, newItem]);
-    setShowAddMenuItemForm(false); // Hide form after submission
-    setNewItem({ name: '', imageUrl: '', price: '' });
+    setShowAddMenuItemForm(false);
+    setNewItem({ name: '', imageUrl: '', price: '', id: '' });
   };
 
   return (
-    <div>
+    <div className="menu-container">
       {notification && (
-        <Notification
-          message={notification}
-          onClose={() => setNotification('')} // Allow closing the notification
-        />
+        <Notification message={notification} onClose={() => setNotification('')} />
       )}
+
+      <h1>Menu</h1>
       <div className="menu-list">
-        {menu.map((item, index) => (
-          <div key={index} className="menu-item">
-            {isEditing === index ? (
-              <>
-                <input
-                  type="text"
-                  value={item.name}
-                  onChange={(e) => handleInputChange(index, 'name', e.target.value)}
-                />
-                <input
-                  type="text"
-                  value={item.imageUrl}
-                  onChange={(e) => handleInputChange(index, 'imageUrl', e.target.value)}
-                />
-                <input
-                  type="text"
-                  value={item.price}
-                  onChange={(e) => handleInputChange(index, 'price', e.target.value)}
-                />
-                <button onClick={() => handleSave(index)}>Save</button>
-              </>
-            ) : (
-              <>
-                <img className="menu-image" src={item.imageUrl} alt={item.name} />
-                <h3 className="menu-name">{item.name}</h3>
-                <p className="menu-price">{item.price}</p>
-                <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
-                <button onClick={() => handleEdit(index)}>Edit</button>
-              </>
-            )}
-          </div>
-        ))}
+        {menu.length === 0 ? (
+          <p>No items available in the menu</p>  // Display a message when no items are available
+        ) : (
+          menu.map((item) => (
+            <div key={item.id} className="menu-item">  {/* Use item.id for unique key */}
+              <img className="menu-image" src={item.imageUrl} alt={item.name} />
+              <h3>{item.name}</h3>
+              <p>${item.price}</p>
+              <button onClick={() => addToCart(item)}>Add to Cart</button>
+            </div>
+          ))
+        )}
       </div>
 
       <button onClick={() => setShowAddMenuItemForm(!showAddMenuItemForm)}>
-        Add New Menu Item
+        {showAddMenuItemForm ? 'Cancel' : 'Add New Menu Item'}
       </button>
 
       {showAddMenuItemForm && (
@@ -94,7 +83,7 @@ const Menu = () => {
           <h3>Add New Menu Item</h3>
           <input
             type="text"
-            placeholder="Item Name"
+            placeholder="Name"
             value={newItem.name}
             onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
           />
@@ -105,10 +94,16 @@ const Menu = () => {
             onChange={(e) => setNewItem({ ...newItem, imageUrl: e.target.value })}
           />
           <input
-            type="text"
+            type="number"
             placeholder="Price"
             value={newItem.price}
             onChange={(e) => setNewItem({ ...newItem, price: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="ID"
+            value={newItem.id}
+            onChange={(e) => setNewItem({ ...newItem, id: e.target.value })}
           />
           <button onClick={handleAddMenuItem}>Submit</button>
         </div>
@@ -116,4 +111,5 @@ const Menu = () => {
     </div>
   );
 };
+
 export default Menu;

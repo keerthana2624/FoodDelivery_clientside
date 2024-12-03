@@ -1,12 +1,16 @@
 import React,{useState} from 'react'
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
 
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
+    const navigate=useNavigate();
 
     const handleSubmit=(e)=>{
         console.log(email, password);
+        navigate('/restaurants');
+
     };
 
   return (
@@ -33,6 +37,7 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
       </form>
+      <h3>New user? <a href="/register">register now</a></h3>
     </div>
   )
 }
