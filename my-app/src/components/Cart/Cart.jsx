@@ -1,16 +1,26 @@
 
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Cart.css'
 
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Cart.css';
 
 const CartD = () => {
   const navigate = useNavigate();
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Initialize the cart state from localStorage
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCart = JSON.parse(localStorage.getItem('cart'));
+    return storedCart || [];
+  });
+
+  // Update localStorage whenever cartItems changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const removeFromCart = (item) => {
     const updatedCart = cartItems.filter((cartItem) => cartItem.id !== item.id);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setCartItems(updatedCart); // Update state and localStorage
   };
 
   const increaseQuantity = (item) => {
@@ -19,7 +29,7 @@ const CartD = () => {
         ? { ...cartItem, quantity: cartItem.quantity + 1 }
         : cartItem
     );
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setCartItems(updatedCart); // Update state and localStorage
   };
 
   const decreaseQuantity = (item) => {
@@ -28,7 +38,7 @@ const CartD = () => {
         ? { ...cartItem, quantity: cartItem.quantity - 1 }
         : cartItem
     );
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setCartItems(updatedCart); // Update state and localStorage
   };
 
   const totalAmount = cartItems.reduce(
@@ -51,9 +61,13 @@ const CartD = () => {
                 <p>Quantity: {item.quantity}</p>
               </div>
               <div className="quantity-controls">
-                <button onClick={() => decreaseQuantity(item)} disabled={item.quantity === 1}>
+                <button
+                  onClick={() => decreaseQuantity(item)}
+                  disabled={item.quantity === 1}
+                >
                   -
                 </button>
+                <span className="quantity">{item.quantity}</span> {/* Display quantity here */}
                 <button onClick={() => increaseQuantity(item)}>+</button>
               </div>
               <button onClick={() => removeFromCart(item)}>Remove</button>
@@ -72,3 +86,5 @@ const CartD = () => {
 };
 
 export default CartD;
+
+

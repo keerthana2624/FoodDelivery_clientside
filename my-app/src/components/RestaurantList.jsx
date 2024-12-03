@@ -7,162 +7,150 @@ import Menu from './Menu';
 
 
 const restaurantData = [
-  {
+  { id : 1,
     name: 'Bawarchi',
     description: 'Famous for Hyderabadi Biryani with rich flavors and spices.',
     imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
     menu: [
-      { name: 'Chicken Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.99' },
-      { name: 'Paneer Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.99' },
-      { name: 'Mutton Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$14.99' },
-      { name: 'Egg Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
-      { name: 'Veg Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.99' }
+      { id: 'B01',name: 'Chicken Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.99' },
+      { id: 'B02',name: 'Paneer Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.99' },
+      { id: 'B03',name: 'Mutton Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$14.99' },
+      { id: 'B04',name: 'Egg Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
+      { id: 'B05',name: 'Veg Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.99' }
     ]
   },
-  {
+  { id: 2,
     name: 'Paradise Restaurant',
     description: 'Iconic spot known for its legendary biryani and Mughlai cuisine.',
     imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
     menu: [
-      { name: 'Mutton Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$14.99' },
-      { name: 'Hyderabadi Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$13.49' },
-      { name: 'Kebab Platter', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$16.99' },
-      { name: 'Chicken 65', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
-      { name: 'Nihari', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$15.49' }
+      { id: 'PR01',name: 'Mutton Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$14.99' },
+      { id: 'PR02',name: 'Hyderabadi Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$13.49' },
+      { id: 'PR03',name: 'Kebab Platter', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$16.99' },
+      { id: 'PR04',name: 'Chicken 65', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
+      { id: 'PR05',name: 'Chilli Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$15.49' }
     ]
   },
-  {
+  { id: 3,
     name: 'Shah Ghouse',
     description: 'Popular for authentic Hyderabadi dishes and kebabs.',
     imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
     menu: [
-      { name: 'Haleem', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.99' },
-      { name: 'Mutton Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$14.49' },
-      { name: 'Chicken Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.99' },
-      { name: 'Kebabs', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.99' },
-      { name: 'Tandoori Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.99' }
+      { id: 'SG01',name: 'Haleem', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.99' },
+      { id: 'SG02',name: 'Mutton Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$14.49' },
+      { id: 'SG03',name: 'Chicken Biryani', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.99' },
+      { id: 'SG04',name: 'Kebabs', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.99' },
+      { id: 'SG05',name: 'Tandoori Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.99' }
     ]
   },
-  {
+  { id: 4,
     name: 'Naidu Tiffins',
     description: 'delicious South Indian breakfasts and chutneys.',
     imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
     menu: [
-      { name: 'Idli', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.99' },
-      { name: 'Dosa', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$5.99' },
-      { name: 'Uttapam', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.99' },
-      { name: 'Vada', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.49' },
-      { name: 'Poori Bhaji', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$7.99' }
+      { id: 'NT01',name: 'Idli', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.99' },
+      { id: 'NT02',name: 'Dosa', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$5.99' },
+      { id: 'NT03',name: 'Uttapam', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.99' },
+      { id: 'NT04',name: 'Vada', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.49' },
+      { id: 'NT05',name: 'Poori Bhaji', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$7.99' }
     ]
   },
-  // {
-  //   name: 'Olive Bistro',
-  //   description: 'A cozy restaurant offering Mediterranean and European cuisine.',
-  //   imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
-  //   menu: [
-  //     { name: 'Greek Salad', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.99' },
-  //     { name: 'Margherita Pizza', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.99' },
-  //     { name: 'Pasta Alfredo', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.99' },
-  //     { name: 'Grilled Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$15.49' },
-  //     { name: 'Tiramisu', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.99' }
-  //   ]
-  // },
-  {
+  { id : 5,
     name: 'Chinese Food',
     description: 'Restaurant serving Indian, Chinese, and Continental dishes.',
     imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
     menu: [
-      { name: 'Hakka Noodles', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.49' },
-      { name: 'Paneer Butter Masala', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.49' },
-      { name: 'Fried Rice', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
-      { name: 'Chicken Manchurian', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.99' },
-      { name: 'Veg Spring Rolls', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.49' }
+      {id:'CF01', name: 'Hakka Noodles', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.49' },
+      {id:'CF02', name: 'Paneer Butter Masala', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.49' },
+      {id:'CF03', name: 'Fried Rice', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
+      {id:'CF04', name: 'Chicken Manchurian', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.99' },
+      { id:'CF05',name: 'Veg Spring Rolls', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.49' }
     ]
   },
-  {
+  { id: 6,
     name: ' VarLakshmi Tiffins',
     description: 'Popular for South Indian vegetarian dishes and coffee.',
     imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
     menu: [
-      { name: 'Masala Dosa', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.49' },
-      { name: 'Idli Sambar', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$5.49' },
-      { name: 'Medu Vada', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.49' },
-      { name: 'Filter Coffee', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$2.99' },
-      { name: 'Onion Rava Dosa', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$7.49' }
+      { id: 'VT01',name: 'Masala Dosa', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.49' },
+      { id: 'VT02',name: 'Idli Sambar', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$5.49' },
+      { id: 'VT03',name: 'Medu Vada', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.49' },
+      { id: 'VT04',name: 'Filter Coffee', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$2.99' },
+      { id: 'VT05',name: 'Onion Rava Dosa', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$7.49' }
     ]
   },
-  {
+  {   id:7,
       name: 'BBQ Nation',
       description: 'All-you-can-eat restaurant offering a wide variety of barbecue options.',
       imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
       menu: [
-        { name: 'Grilled Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$15.99' },
-        { name: 'Paneer Tikka', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.49' },
-        { name: 'Tandoori Prawns', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$18.99' },
-        { name: 'Chicken Wings', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.49' },
-        { name: 'Veg Seekh Kebabs', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
-        { name: 'Lamb Chops', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$19.49' },
-        { name: 'Fish Tikka', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$16.99' },
-        { name: 'Garlic Naan', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$3.49' },
-        { name: 'Stuffed Paratha', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.49' },
-        { name: 'Brownie with Ice Cream', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.99' }
+        { id: 'BN01',name: 'Grilled Chicken', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$15.99' },
+        { id: 'BN02',name: 'Paneer Tikka', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.49' },
+        { id: 'BN03',name: 'Tandoori Prawns', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$18.99' },
+        { id: 'BN04',name: 'Chicken Wings', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$12.49' },
+        { id: 'BN05',name: 'Veg Seekh Kebabs', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
+        { id: 'BN06',name: 'Lamb Chops', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$19.49' },
+        { id: 'BN07',name: 'Fish Tikka', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$16.99' },
+        { id: 'BN08',name: 'Garlic Naan', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$3.49' },
+        { id: 'BN09',name: 'Stuffed Paratha', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.49' },
+        { id: 'BN10',name: 'Brownie with Ice Cream', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.99' }
       ]
     },
     
 
-     {
+     { id : 8, 
     name: 'The Vegan Delight',
     description: 'Healthy and delicious plant-based meals for everyone.',
     imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg',
     menu: [
-      { name: 'Vegan Burger', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99' },
-      { name: 'Vegan Tacos', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.49' },
-      { name: 'Quinoa Salad', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$7.99' },
-      { name: 'Vegan Sushi', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.99' },
-      { name: 'Chickpea Wrap', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.99' },
-      { name: 'Falafel Plate', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.49' },
-      { name: 'Vegan Pancakes', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.99' },
-      { name: 'Stuffed Avocados', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.49' },
-      { name: 'Lentil Soup', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$5.99' },
-      { name: 'Chia Pudding', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.99' }
+      { id: 'TVD01',name: 'Vegan Burger', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.99',  },
+      { id: 'TVD02',name: 'Vegan Tacos', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.49' },
+      { id: 'TVD03',name: 'Quinoa Salad', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$7.99' },
+      { id: 'TVD04',name: 'Vegan Sushi', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$11.99' },
+      { id: 'TVD05',name: 'Chickpea Wrap', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$8.99' },
+      { id: 'TVD06',name: 'Falafel Plate', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$10.49' },
+      { id: 'TVD07',name: 'Vegan Pancakes', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$6.99' },
+      { id: 'TVD08',name: 'Stuffed Avocados', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$9.49' },
+      { id: 'TVD09',name: 'Lentil Soup', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$5.99' },
+      { id: 'TVD10',name: 'Chia Pudding', imageUrl: 'https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2024%2Ftrend20180912075024.jpg', price: '$4.99' }
     ]
   },
   
   // New Restaurant 2
-  {
+  { id: 9,
     name: 'The Chinese Bowl',
     description: 'A restaurant offering a variety of authentic Chinese dishes.',
     imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg',
     menu: [
-      { name: 'Fried Rice', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$8.99' },
-      { name: 'Chicken Manchurian', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$10.99' },
-      { name: 'Hakka Noodles', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$9.49' },
-      { name: 'Sweet and Sour Chicken', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$11.99' },
-      { name: 'Spring Rolls', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$6.99' },
-      { name: 'Szechuan Chicken', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$12.99' },
-      { name: 'Kung Pao Prawns', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$14.99' },
-      { name: 'Dim Sum Platter', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$9.99' },
-      { name: 'Crispy Tofu', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$7.99' },
-      { name: 'Hot and Sour Soup', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$5.49' }
+      { id: 'TCB01',name: 'Fried Rice', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$8.99' },
+      { id: 'TCB02',name: 'Chicken Manchurian', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$10.99' },
+      { id: 'TCB03',name: 'Hakka Noodles', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$9.49' },
+      { id: 'TCB04',name: 'Sweet and Sour Chicken', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$11.99' },
+      { id: 'TCB05',name: 'Spring Rolls', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$6.99' },
+      { id: 'TCB06',name: 'Szechuan Chicken', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$12.99' },
+      { id: 'TCB07',name: 'Kung Pao Prawns', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$14.99' },
+      { id: 'TCB08',name: 'Dim Sum Platter', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$9.99' },
+      { id: 'TCB09',name: 'Crispy Tofu', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$7.99' },
+      { id: 'TCB10',name: 'Hot and Sour Soup', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$5.49' }
     ]
   },
 
   // New Restaurant 3
-  {
+  { id: 10,
     name: 'Italiano',
     description: 'Authentic Italian restaurant serving wood-fired pizzas and pasta.',
     imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg',
     menu: [
-      { name: 'Margherita Pizza', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$11.99' },
-      { name: 'Pepperoni Pizza', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$13.49' },
-      { name: 'Fettuccine Alfredo', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$12.99' },
-      { name: 'Lasagna', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$14.49' },
-      { name: 'Bruschetta', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$7.99' },
-      { name: 'Caesar Salad', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$9.49' },
-      { name: 'Tiramisu', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$6.99' },
-      { name: 'Spaghetti Carbonara', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$13.49' },
-      { name: 'Mushroom Risotto', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$12.49' },
-      { name: 'Garlic Bread', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$4.99' }
+      { id: 'I01',name: 'Margherita Pizza', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$11.99' },
+      { id: 'I02',name: 'Pepperoni Pizza', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$13.49' },
+      { id: 'I03',name: 'Fettuccine Alfredo', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$12.99' },
+      { id: 'I04',name: 'Lasagna', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$14.49' },
+      { id: 'I05',name: 'Bruschetta', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$7.99' },
+      { id: 'I06',name: 'Caesar Salad', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$9.49' },
+      { id: 'I07',name: 'Tiramisu', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$6.99' },
+      { id: 'I08',name: 'Spaghetti Carbonara', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$13.49' },
+      { id: 'I09',name: 'Mushroom Risotto', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$12.49' },
+      { id: 'I10',name: 'Garlic Bread', imageUrl: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg', price: '$4.99' }
     ]
   },
 
