@@ -69,6 +69,7 @@ const CartD = () => {
                 </button>
                 <span className="quantity">{item.quantity}</span> {/* Display quantity here */}
                 <button onClick={() => increaseQuantity(item)}>+</button>
+                
               </div>
               <button onClick={() => removeFromCart(item)}>Remove</button>
             </div>

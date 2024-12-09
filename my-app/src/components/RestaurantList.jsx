@@ -204,6 +204,8 @@ const RestaurantList = () => {
     <div className="restaurant-list">
       {restaurants.map((restaurant, index) => (
         <div key={index} className="restaurant-card">
+          {/* {console.log(index)};
+          {console.log(restaurant)}; */}
           {isEditing === index ? (
             <>
               <input

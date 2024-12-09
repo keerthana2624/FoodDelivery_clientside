@@ -3,13 +3,21 @@ import './Login.css';
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
 
-    const [email, setEmail]=useState('');
+    const [email, setEmails]=useState('');
     const [password, setPassword]=useState('');
     const navigate=useNavigate();
 
     const handleSubmit=(e)=>{
-        console.log(email, password);
-        navigate('/restaurants');
+      const userEmail="keerthi@gmail.com";
+      const userPassword="1234";
+        // console.log(email, password);
+        if (email!=userEmail || userPassword!=password){
+          console.log("invalid credentials");
+          navigate('/');
+        }else{
+          navigate('/restaurants');
+        }
+        
 
     };
 
@@ -22,7 +30,7 @@ const Login = () => {
             <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmails(e.target.value)}
                 required
                 />
         </div>
