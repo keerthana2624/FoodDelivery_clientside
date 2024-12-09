@@ -20,6 +20,7 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
+          {/* <Route path="/" element={<Register />} /> */}
           <Route path="/" element={<Login />} />
           <Route path="/menu/:restaurantName" element={<Menu />} />
           <Route path="/restaurants" element={<RestaurantList />} />
